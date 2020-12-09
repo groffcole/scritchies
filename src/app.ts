@@ -1,3 +1,3 @@
-export const hello = () => {
-  return "world";
+export const hello = (suffix: string = "world") => {
+  return `hello, ${suffix}`;
 };
