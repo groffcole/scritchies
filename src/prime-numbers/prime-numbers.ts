@@ -13,7 +13,7 @@ export const isPrimeNumber = (givenNumber: number): boolean => {
     if (divisor <= 3) {
       divisor++;
     } else {
-      // divisors greater than three can be increased by 2 because any number 
+      // divisors greater than three can be increased by 2 because any number
       // divisible by an even number is divisible by 2
       divisor += 2;
     }
@@ -21,4 +21,20 @@ export const isPrimeNumber = (givenNumber: number): boolean => {
 
   // if we've made it this far then the given number is prime
   return true;
+};
+
+export const getPrimeFactors = (givenNumber: number) => {
+  const factors = [];
+  let divisor = 3;
+
+  while (givenNumber > 2) {
+    if (givenNumber % divisor == 0) {
+      factors.push(divisor);
+      givenNumber = givenNumber / divisor;
+    } else {
+      divisor++;
+    }
+  }
+
+  return factors;
 };
