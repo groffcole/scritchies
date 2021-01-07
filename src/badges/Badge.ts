@@ -7,6 +7,8 @@ type Badge = {
   updated: string;
 };
 
+export default Badge;
+
 /*
 ------------------------------ create
 [POST] /badges
@@ -22,20 +24,7 @@ responses:
 - response status codes
 --- 201 (CREATED)
 
------------------------------- read
-[GET] /badges/{badge_id}
 
-responses:
-- response status codes
---- 200 (OK)
---- 404 (NOT FOUND)
-- response JSON:
-{
-  id...
-  name...
-  contentId...
-  ....
-}
 
 ------------------------------ update
 [PUT] /badges/{badge_id}
